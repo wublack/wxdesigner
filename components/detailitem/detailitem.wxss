@@ -1,0 +1,41 @@
+/* components/detailitem/detailitem.wxss */
+.comp-detail-item-root{
+  height: 102rpx;
+  line-height: 102rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  padding: 0 40rpx;
+  position: relative;
+}
+
+.comp-detail-item-root-unline{
+  height: 102rpx;
+  line-height: 102rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: white;
+  padding: 0 40rpx;
+}
+
+.comp-detail-item-root::after{
+  position: absolute;
+  content: '';
+  line-height: 2rpx;
+  height: 2rpx;
+  width: 100%;
+  bottom: 0;
+  background: #eee;
+}
+
+.comp-detail-item-left{
+  color: #515151;
+  font-size: 28rpx;
+}
+
+.comp-detail-item-right{
+  color: #999;
+  font-size: 24rpx;
+}

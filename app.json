@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/orderdetail/orderdetail",
     "pages/message/message",
     "pages/home/home",
     "pages/index/index",
     "pages/orderList/orderList",
     "pages/logs/logs",
     "pages/order/order",
-    "pages/orderdetail/orderdetail",
-    "pages/chatroom/chatroom"
+    "pages/chatroom/chatroom",
+    "pages/noticeList/noticeList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,7 +23,6 @@
       {
         "pagePath": "pages/message/message",
         "text": "消息"
-       
       },
       {
         "pagePath": "pages/home/home",

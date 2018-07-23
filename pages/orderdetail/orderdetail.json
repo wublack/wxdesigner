@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents": {
+    "component-detail-item": "/components/detailitem/detailitem",
+    "item-header":"/components/itemheader/itemheader"
+  }
+}

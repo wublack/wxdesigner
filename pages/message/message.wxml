@@ -1,33 +1,43 @@
 <!--pages/message/message.wxml-->
 <scroll-view>
-  <view class='message-order-infoms'>
+  <view class='message-order-infoms' bindtap='lookOrderNotice'>
     <view class='message-order-infoms-left'>
       <image class='message-order-infoms-img' src='../../resource/img/img_system_informs.png'></image>
       <view class='message-order-infoms-text'>
         <text class='message-order-infoms-text1'>订单通知</text>
-        <text class='message-order-infoms-text2'>产品已发货，请注意查收</text>
+        <text class='message-order-infoms-text2'>产品已发货，请注意查收</text>
       </view>
     </view>
     <text class='message-order-infoms-time'>2017-04-26</text>
   </view>
-  <view class='message-order-online-service'>
+  <view class='message-order-online-service' bindtap='gotoChat' data-chat-room='server_room'>
     <view class='message-order-infoms-left'>
       <image class='message-order-infoms-img' src='../../resource/img/img_line_service.png'></image>
       <view class='message-order-infoms-text'>
         <text class='message-order-infoms-text1'>在线客服</text>
-        <text class='message-order-infoms-text2'>请问你有什么需要帮助</text>
+        <text class='message-order-infoms-text2'>请问你有什么需要帮助</text>
       </view>
     </view>
     <text class='message-order-infoms-time'>2017-04-26</text>
   </view>
-  <view class='message-order-message-item' bindtap='gotoChat' data-chat-room='611250122'>
+  <view class='message-order-message-item' bindtap='gotoChat' data-chat-room='message.to' wx:if="{{chatList.length != 0}}" wx:for="{{chatList}}" wx:for-item="message" wx:key="message.time">
     <view class='message-order-infoms-left'>
       <image class='message-order-infoms-img' src='../../resource/img/cril_default_image.png'></image>
-      <view class='message-order-infoms-text'>
+      <view class='message-order-infoms-text' wx:if="{{message.scene ==='team'}}">
+        <block wx:if="{{message.serverCustom}}">
+          <text class='message-order-infoms-text1'>{{message.serverCustom.name}}</text>
+          <text class='message-order-infoms-text2'>手术设计方案已经上传</text>
+        </block>
+        <block wx:else>
+          <text class='message-order-infoms-text1'>医数聚沟通群</text>
+          <text class='message-order-infoms-text2'>手术设计方案已经上传</text>
+        </block>
+      </view>
+      <view class='message-order-infoms-text' wx:else >
         <text class='message-order-infoms-text1'>张医生</text>
-        <text class='message-order-infoms-text2'>手术设计方案已经上传</text>
+        <text class='message-order-infoms-text2'>手术设计方案已经上传</text>
       </view>
     </view>
-    <text class='message-order-infoms-time'>2017-04-26</text>
+    <text class='message-order-infoms-time'>{{message.formateTime}}</text>
   </view>
 </scroll-view>

@@ -110,6 +110,9 @@ export default class IMEventHandler {
     app.globalData.loginUser = user
     // 初始化消息列表
     app.globalData.messageList[user.account] = app.globalData.messageList[user.account] || {}
+
+    app.globalData.subscriber.emit('UPDATE_USER_MESSAGE',user)
+
   }
   /**
    * 个人名片更新-其他端修改
@@ -560,6 +563,8 @@ export default class IMEventHandler {
       return a.updateTime > b.updateTime
     })
     // console.log('onSessions', sessions)
+    app.globalData.subscriber.emit('UPDATE_SESSION', sessions)
+
     setTimeout(() => {
       for (let i = 0; i < sessions.length; i++) {
         let session = sessions[i]
@@ -833,6 +838,7 @@ export default class IMEventHandler {
     // wx.switchTab({
     //   url: '../recentchat/recentchat',
     // })
+    
     wx.showToast({
       title: 'IM登录成功',
       icon: 'success',

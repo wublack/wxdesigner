@@ -1,0 +1,5 @@
+<!--components/detailitem/detailitem.wxml-->
+<view class="{{showLine?'comp-detail-item-root':'comp-detail-item-root-unline'}}" >
+  <text class='comp-detail-item-left'>{{leftTitle}}</text>
+  <text class='comp-detail-item-right'>{{rightTitle}}</text>
+</view>

@@ -50,9 +50,10 @@ Page({
         'content-type': 'application/json'
       },
       success: function(res) {
+        console.log(res)
         console.log(res.data.error_code === 'Y10000')
         if (res.data.error_code === 'Y10000') {
-          app.globalData.userInfo = res.data.datas
+          app.globalData.ptyUserInfo = res.data.datas
           let token = res.data.datas.token
           let account = res.data.datas.accid
           console.log(token)
@@ -96,7 +97,7 @@ Page({
       })
     }
     wx.setNavigationBarTitle({
-      title: '登录账户'
+      title: '登录账户'
     })
   },
   getUserInfo: function(e) {

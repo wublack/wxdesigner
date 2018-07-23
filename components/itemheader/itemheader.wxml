@@ -1,0 +1,4 @@
+<!--components/itemheader/itemheader.wxml-->
+<view class='comp-item-header-root'>
+  <text class='item-header-text'>{{title}}</text>
+</view>

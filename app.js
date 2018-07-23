@@ -54,6 +54,7 @@ App({
     friendsWithCard: {}, // 带有名片信息的好友列表（转发时使用）
     friendsCard: {},//带有名片信息的好友列表
     onlineList: {},//在线人员名单 account: status
-    blackList: {}//黑名单列表
+    blackList: {},//黑名单列表
+    ptyUserInfo:{}//普天阳登录用户信息
   }
 })

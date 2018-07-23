@@ -25,11 +25,11 @@ Page({
       },
       {
         imgType: '../../resource/img/comment.png',
-        typeTitle: '待评价'
+        typeTitle: '待评价'
       },
       {
         imgType: '../../resource/img/trade_finish.png',
-        typeTitle: '交易完成'
+        typeTitle: '交易完成'
       },
     ]
   },
@@ -46,7 +46,7 @@ Page({
    */
   onLoad: function(options) {
     wx.setNavigationBarTitle({
-      title: ''
+      title: ''
     })
     
   },
