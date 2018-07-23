@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/message/message",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/orderList/orderList",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/orderdetail/orderdetail",
+    "pages/chatroom/chatroom"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "医数聚",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "top",
+    "selectedColor": "#4825BF",
+    "list": [
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息"
+       
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "订单"
+      }
+    ]
+  }
+}

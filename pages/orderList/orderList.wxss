@@ -1,0 +1,53 @@
+/* pages/orderList/orderList.wxss */
+.order-list-item{
+  border-top: 10rpx solid rgba(218, 218, 218, 0.50);
+  display: flex;
+  flex-direction: column;
+}
+
+.order-list-item-oprate-title{
+  font-size: 32rpx;
+  color: #313131;
+  margin-left: 40rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.order-list-item-patient-info{
+  font-size: 28rpx;
+  color: #515151;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+}
+
+.order-list-item-order-owner{
+  font-size: 28rpx;
+  margin-left: 40rpx;
+  color: #515151;
+  margin-top: 5rpx;
+}
+
+.order-list-item-order-no{
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 40rpx;
+  margin-top: 10rpx;
+}
+
+.order-list-item-create-time{
+  font-size: 24rpx;
+  margin-left: 40rpx;
+  color: #999;
+  margin-top: 5rpx;
+  margin-bottom: 20rpx;
+}
+
+.order-list-item-look-detail{
+  width: 100%;
+  font-size: 24rpx;
+  color: #999;
+  padding: 15rpx 0;
+  background-color: #f8f8f8;
+  text-align: center;
+}

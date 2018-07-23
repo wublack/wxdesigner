@@ -1,0 +1,5 @@
+/* pages/order/order.wxss */
+.swiper-item{
+  display: flex;
+  flex-direction: column
+}

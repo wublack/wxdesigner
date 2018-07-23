@@ -1,0 +1,91 @@
+<!--pages/orderList/orderList.wxml-->
+<scroll-view style='height:{{windowHeight}}px;' scroll-y bindscrolltoupper='upper' bindscroll="scroll" bindscrolltolower='lower'>
+  <view class='order-list-item' bindtap='lookDetail'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者：   钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+  <view class='order-list-item'>
+    <text class='order-list-item-oprate-title'>肿瘤外科>肿瘤重建和测量服务</text>
+    <text class='order-list-item-patient-info'>患者： 钟永年 25岁 女</text>
+    <text class='order-list-item-order-owner'>下单人：陈浩那 13838384380</text>
+    <text class='order-list-item-order-no'>订单编号：PTY201705230055</text>
+    <text class='order-list-item-create-time'>下单时间：2017-05-22 23：02：08</text>
+    <text class='order-list-item-look-detail'>查看详情</text>
+  </view>
+</scroll-view>

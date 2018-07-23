@@ -1,0 +1,36 @@
+<!--pages/home/home.wxml-->
+<view>
+  <swiper class='home-swiper'>
+    <block>
+      <swiper-item class='item'>
+        <view class='swiper-item'>
+          <text class='order-type'>加急订单</text>
+          <text class='order-oprate-type'>正颌外科 > 要手术设计和咬合板</text>
+          <text class='order-patient-info'>患者：陈浩发 男 20岁</text>
+          <text class='order-patient-info'>下单人：陈浩南 13408080808</text>
+          <text class='order-accept'>立刻接单 ></text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='look-all-order'>
+    <text class='left-text'>全部订单</text>
+    <text class='right-text'>查看全部订单></text>
+  </view>
+  <view class='wait-order'>
+    <view>
+      <view class='left-chirld-design'>
+        <image class='img-style' src='../../resource/img/waiting_for.png'></image>
+        <text class='wait-design'>等待开始设计的订单</text>
+      </view>
+      <text class='wait-other-order'>查看在分割中心设计的，和等你审核的订单</text>
+    </view>
+    <image class='next-step-style' src='../../resource/img/next_step.png'></image>
+  </view>
+  <view class='all-order-type'>
+    <view class='order-type-item' wx:for="{{allOrderTypes}}" wx:for-item="item" data-item-titile="{{item.typeTitle}}" wx:key="{{item}}" bindtap='gotoOrderList' >
+      <image src='{{item.imgType}}' class='order-img-type'></image>
+      <text class='order-type-text'>{{item.typeTitle}}</text>
+    </view>
+  </view>
+</view>
