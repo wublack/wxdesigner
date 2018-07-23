@@ -10,7 +10,7 @@
     </view>
     <text class='message-order-infoms-time'>2017-04-26</text>
   </view>
-  <view class='message-order-online-service' bindtap='gotoChat' data-chat-room='server_room'>
+  <view class='message-order-online-service' bindtap='gotoChat' data-chat-room='{{server_room}}'>
     <view class='message-order-infoms-left'>
       <image class='message-order-infoms-img' src='../../resource/img/img_line_service.png'></image>
       <view class='message-order-infoms-text'>

@@ -40,7 +40,9 @@ Page({
     // console.log('聊天界面', options)
     // console.log(app.globalData.messageList[app.globalData['loginUser']['account']])
     let chatWrapperMaxHeight = wx.getSystemInfoSync().windowHeight - 52 - 35
-
+    this.setData({
+      chatTo: options.chatTo
+    })
     // 初始化聊天对象
     let self = this,
       tempArr = [],

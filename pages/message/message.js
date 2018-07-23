@@ -47,10 +47,10 @@ Page({
         server_room: app.globalData.ptyUserInfo.server_room
       })
     }
-    new IMEventHandler({
-      token: 'e8iok5627goqu5emw2sk',
-      account: 'yxdcrphypvp'
-    })
+    // new IMEventHandler({
+    //   token: 'e8iok5627goqu5emw2sk',
+    //   account: 'yxdcrphypvp'
+    // })
     app.globalData.subscriber.on('UPDATE_USER_MESSAGE', (user) => {
       // console.log("recentChatList",app.globalData.recentChatList)
 
