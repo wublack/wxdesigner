@@ -8,6 +8,7 @@
   background: white;
   padding: 0 40rpx;
   position: relative;
+  margin-top: 1rpx;
 }
 
 .comp-detail-item-root-unline{

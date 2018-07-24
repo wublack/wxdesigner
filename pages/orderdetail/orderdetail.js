@@ -1,11 +1,12 @@
 // pages/orderdetail/orderdetail.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+      orderDetail:{}
   },
 
   /**
@@ -14,6 +15,26 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '订单详情'
+    })
+    this.getOrderDetail('')
+  },
+
+  getOrderDetail: function (orderid) {
+    let self = this
+    wx.request({
+      url: app.globalData.config.baseUrl + '/order/findByOrder',
+      method: 'POST',
+      data: {
+        order_id: '1786'
+      },
+      success: function (res) {
+        // console.log(res)
+        self.setData({
+          orderDetail: res.data.datas.serviceInfo
+        })
+        console.log(self.data.orderDetail.design_nickname)
+      }
+
     })
   },
 

@@ -1,15 +1,14 @@
 <!--pages/orderdetail/orderdetail.wxml-->
 <scroll-view>
   <view class='swiper-item'>
-          <text class='order-type'>加急订单</text>
-          <text class='order-oprate-type'>正颌外科 > 要手术设计和咬合板</text>
-          <text class='order-patient-info'>患者：陈浩发 男 20岁</text>
-          <text class='order-patient-info'>下单人：陈浩南 13408080808</text>
-          <text class='order-accept'>立刻接单 ></text>
-        </view>
+    <text class='order-oprate-type'>{{orderDetail.order_service_list[0].name}} > {{orderDetail.order_service_list[0].service_name}}</text>
+    <text class='order-owner-info'>下单人：{{orderDetail.place_nickname}} {{orderDetail.place_username}}</text>
+    <text class='order-patient-info'>订单编号：{{orderDetail.order_no}}</text>
+    <text class='order-patient-info'>创建时间：2017-05-12 11:38</text>
+  </view>
   <view class='order-detail-content'>
-    <component-detail-item leftTitle='分割设计师' rightTitle='陈浩南'></component-detail-item>
-    <component-detail-item leftTitle='手术设计师' rightTitle='陈浩北' showLine='{{false}}'></component-detail-item>
+    <component-detail-item leftTitle='分割设计师' rightTitle='{{orderDetail.userRecons.nickname}}'></component-detail-item>
+    <component-detail-item leftTitle='手术设计师' rightTitle='{{orderDetail.design_nickname}}' showLine='{{false}}'></component-detail-item>
     <item-header title='用户上传数据'></item-header>
     <component-detail-item leftTitle='CT数据：' rightTitle='请到电脑版查看用户上传的数据'></component-detail-item>
     <component-detail-item leftTitle='牙模模型：' rightTitle='请到电脑版查看用户上传的数据'></component-detail-item>
