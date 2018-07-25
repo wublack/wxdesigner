@@ -51,6 +51,7 @@
   font-size: 24rpx;
   color: #999;
   margin-left: 20rpx;
+  margin-right: 30rpx;
 }
 
 .order-detail-address-row1 {
@@ -63,7 +64,7 @@
 }
 
 .order-detail-address-row2-view {
-  width: 92rpx;
+  width: 100rpx;
   height: 36rpx;
   line-height: 36rpx;
   display: flex;
@@ -72,40 +73,43 @@
   border-radius: 8rpx;
 }
 
-.item{
+.item {
   height: 100%;
 }
-.swiper-item{
+
+.swiper-item {
   display: flex;
   flex-direction: column;
   height: 244rpx;
   background: #f5f5f5;
 }
 
-.order-type{
-  color: #4825BF;
+.order-type {
+  color: #4825bf;
   font-size: 32rpx;
-  padding-left: 48rpx;  
+  padding-left: 48rpx;
   padding-top: 24rpx;
   padding-bottom: 10rpx;
 }
 
-.order-oprate-type{
+.order-oprate-type {
   font-size: 32rpx;
-  padding-left: 48rpx;  
+  padding-left: 48rpx;
   color: #515151;
   margin-top: 28rpx;
- 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.order-patient-info{
+.order-patient-info {
   font-size: 28rpx;
-  padding-left: 48rpx;  
-  color: #999999;
+  padding-left: 48rpx;
+  color: #999;
 }
 
-.order-owner-info{
-  padding-left: 48rpx;  
+.order-owner-info {
+  padding-left: 48rpx;
   color: #515151;
   font-size: 28rpx;
   margin-top: 5rpx;

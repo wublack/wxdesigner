@@ -7,41 +7,48 @@
     <text class='order-patient-info'>创建时间：2017-05-12 11:38</text>
   </view>
   <view class='order-detail-content'>
-    <component-detail-item leftTitle='分割设计师' rightTitle='{{orderDetail.userRecons.nickname}}'></component-detail-item>
-    <component-detail-item leftTitle='手术设计师' rightTitle='{{orderDetail.design_nickname}}' showLine='{{false}}'></component-detail-item>
+    <component-detail-item leftTitle='分割设计师' wx:if='{{orderDetail.userRecons.nickname}}' rightTitle='{{orderDetail.userRecons.nickname}}'></component-detail-item>
+    <component-detail-item wx:if='{{orderDetail.design_nickname}}' leftTitle='手术设计师' rightTitle='{{orderDetail.design_nickname}}' showLine='{{false}}'></component-detail-item>
     <item-header title='用户上传数据'></item-header>
     <component-detail-item leftTitle='CT数据：' rightTitle='请到电脑版查看用户上传的数据'></component-detail-item>
     <component-detail-item leftTitle='牙模模型：' rightTitle='请到电脑版查看用户上传的数据'></component-detail-item>
     <component-detail-item leftTitle='患者照片：' rightTitle='内容文字' showLine='{{false}}'></component-detail-item>
-    <item-header title='患者信息'></item-header>
-    <component-detail-item leftTitle='患者姓名：' rightTitle='陈浩南'></component-detail-item>
-    <component-detail-item leftTitle='患者性别：' rightTitle='男'></component-detail-item>
-    <component-detail-item leftTitle='患者年龄：' rightTitle='20岁'></component-detail-item>
-    <component-detail-item leftTitle='手术时间：' rightTitle='2017-09-05'></component-detail-item>
-    <component-detail-item leftTitle='所在医院：' rightTitle='四川大学-华西口腔医院'></component-detail-item>
-    <component-detail-item leftTitle='手术医生：' rightTitle='陈浩西'></component-detail-item>
-    <component-detail-item leftTitle='医生诊断：' rightTitle='上颌后缩，下颌前突'></component-detail-item>
-    <component-detail-item leftTitle='需求描述：' rightTitle='上颌前徙大约5mm，其余空间留给下颌' showLine='{{false}}'></component-detail-item>
-    <item-header title='收货地址'></item-header>
-    <view class='order-detail-address'>
-      <view class='order-detail-address-row1'>
-        <text class='order-detail-address-name'>陈耗子</text>
-        <text class='order-detail-address-phone'>+861343434343</text>
-      </view>
-      <view class='order-detail-address-row2'>
-        <view class='order-detail-address-row2-view'>
-          <text class='order-detail-address-detail-title'>收货地址</text>
+    <block wx:if="{{orderDetail.fileds&&orderDetail.fileds.customFileds&&orderDetail.fileds.customFileds.classOptions}}">
+      <item-header title='患者信息'></item-header>
+      <block wx:for='{{orderDetail.fileds.customFileds.classOptions}}' wx:for-item='optionsItem'>
+        <component-detail-item wx:if="{{optionsItem.name!='收货地址'&&optionsItem.name!='多选联系人'}}" leftTitle='{{optionsItem.name}}' rightTitle='{{optionsItem.value}}'></component-detail-item>
+      </block>
+    </block>
+    <block wx:if="{{orderDetail.order_address}}">
+      <item-header title='收货地址'></item-header>
+      <view class='order-detail-address'>
+        <view class='order-detail-address-row1'>
+          <text class='order-detail-address-name'>{{orderDetail.order_address.consignee}}</text>
+          <text class='order-detail-address-phone'>+{{orderDetail.order_address.phone}}</text>
         </view>
-        <text class='order-detail-address-detail'>广东省深圳市福田区南海大道9999号</text>
+        <view class='order-detail-address-row2'>
+          <view class='order-detail-address-row2-view'>
+            <text class='order-detail-address-detail-title'>收货地址</text>
+          </view>
+          <text class='order-detail-address-detail'>{{orderDetail.order_address.province_name}}{{orderDetail.order_address.city_name}}{{orderDetail.order_address.district_name}}{{orderDetail.order_address.detailed}}</text>
+        </view>
       </view>
-    </view>
-    <item-header title='发票信息'></item-header>
-    <component-detail-item leftTitle='单位姓名' rightTitle='深圳医数聚'></component-detail-item>
-    <component-detail-item leftTitle='纳税人识别码' rightTitle='567890987654321'></component-detail-item>
-    <component-detail-item leftTitle='注册地址' rightTitle='中国广东深圳市福田区'></component-detail-item>
-    <component-detail-item leftTitle='注册电话' rightTitle='400-1234-56789'></component-detail-item>
-    <component-detail-item leftTitle='开户银行' rightTitle='中国银行'></component-detail-item>
-    <component-detail-item leftTitle='银行账户' rightTitle='1092837465888888' showLine='{{false}}'></component-detail-item>
+    </block>
+    <block wx:if="{{orderDetail.invoiceInfo}}">
+      <block wx:if="{{orderDetail.invoiceInfo.invoice_type==2}}">
+        <item-header title='发票信息'></item-header>
+        <component-detail-item leftTitle='单位姓名' rightTitle='{{orderDetail.invoiceInfo.invoice_title}}'></component-detail-item>
+        <component-detail-item leftTitle='纳税人识别码' rightTitle='{{orderDetail.invoiceInfo.taxpayer_code}}'></component-detail-item>
+        <component-detail-item leftTitle='注册地址' rightTitle='{{orderDetail.invoiceInfo.registered_address}}'></component-detail-item>
+        <component-detail-item leftTitle='注册电话' rightTitle='{{orderDetail.invoiceInfo.registered_phone}}'></component-detail-item>
+        <component-detail-item leftTitle='开户银行' rightTitle='{{orderDetail.invoiceInfo.bank_name}}'></component-detail-item>
+        <component-detail-item leftTitle='银行账户' rightTitle='{{orderDetail.invoiceInfo.bank_account}}' showLine='{{false}}'></component-detail-item>
+      </block>
+      <block wx:if="{{orderDetail.invoiceInfo.invoice_type==1}}">
+      <item-header title='发票信息'></item-header>
+        <component-detail-item leftTitle='发票抬头' rightTitle='{{orderDetail.invoiceInfo.invoice_title}}' showLine='{{false}}'></component-detail-item>
+      </block>
+    </block>
   </view>
   <view class='order-detail-footer'>
     <text class='order-detail-footer-text'>立即接单</text>

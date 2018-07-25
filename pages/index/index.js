@@ -10,7 +10,8 @@ Page({
     motto: '登录',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    clickable: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -25,14 +26,31 @@ Page({
         password: this.data.userInfo.password
       }
     })
+    this.checkInput()
   },
   pwdInput: function(e) {
+    console.log(e)
     this.setData({
       userInfo: {
         userId: this.data.userInfo.userId,
         password: e.detail.value
       }
     })
+    this.checkInput()
+  },
+  checkInput() {
+    let userId = this.data.userInfo.userId
+    let password = this.data.userInfo.password
+    if (password && userId && userId.length > 0 && password.length > 0) {
+      this.setData({
+        clickable: true
+      })
+    } else {
+      this.setData({
+        clickable: false
+      })
+    }
+    console.log(this.data.clickable)
   },
   userLogin: function() {
     let userId = this.data.userInfo.userId;
@@ -64,7 +82,7 @@ Page({
           wx.switchTab({
             url: '../message/message',
           })
-          
+
         }
       }
     })
