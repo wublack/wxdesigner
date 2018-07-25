@@ -16,7 +16,7 @@ Page({
     wx.setNavigationBarTitle({
       title: '订单详情'
     })
-    this.getOrderDetail('')
+    this.getOrderDetail(options.orderId)
   },
 
   getOrderDetail: function (orderid) {
@@ -25,7 +25,7 @@ Page({
       url: app.globalData.config.baseUrl + '/order/findByOrder',
       method: 'POST',
       data: {
-        order_id: '1786'
+        order_id: orderid
       },
       success: function (res) {
         // console.log(res)

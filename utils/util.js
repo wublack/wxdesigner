@@ -40,6 +40,17 @@ function pushLog (msg) {
   })
   wx.setStorageSync(KEY_LOGS, logs)
 }
+/**
+ * t 时间戳
+ * format 转换格式
+ */
+function dealTime(t){
+  if (t) {
+    return formatDate(new Date(t))
+  } else {
+    return 0
+  }
+}
 
 /**
  * 验证数据长度有效性
@@ -369,5 +380,6 @@ module.exports = {
   generateImageNode,
   deepClone,
   judgeCustomMessageType,
-  clickLogoJumpToCard
+  clickLogoJumpToCard,
+  dealTime,
 }

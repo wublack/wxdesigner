@@ -7,6 +7,6 @@
     <input bindinput='pwdInput' class='input-password' placeholder-class='input-userid-placeholder' type='password' placeholder='请输入密码'></input>
   </view>
   <view class="usermotto">
-    <button hover-class='user-motto-hover' bindtap='userLogin' class="user-motto">{{motto}}</button>
+    <button hover-class='user-motto-hover' disabled="{{clickable}}" bindtap='userLogin' class="user-motto">{{motto}}</button>
   </view>
 </view>
